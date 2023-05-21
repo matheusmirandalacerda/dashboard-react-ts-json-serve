@@ -1,0 +1,87 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "teste@email.com",
+      "password": "123456"
+    }
+  ],
+  "informacoes": [
+    {
+      "id": 1,
+      "profilePic": "https://github.com/Elias-Neto.png",
+      "name": "Elias Neto",
+      "office": "Software Developer",
+      "resume": "Tenho 18 anos e moro no Agreste de Pernambuco 💙🌞.\n\n👀 Estuou em busca da minha **primeira oportunidade** para poder atuar no área de Desenvolvimento de Software.\n\n📍 Meu propósito é poder **ajudar as pessoas** a resolver problemas. Através da tecnologia, busco agregar valor desenvolvendo soluções funcionais que mitiguem dores reais.\n\n🎯 Atualmente, meu foco é o **Desenvolvimento Web Full stack** e estou construindo minha base sólida na tríade desse ambiente (HTML, CSS e JavaScript). Viso me aprofundar na Stack: React JS, React Native e Node JS.\n\n🙋‍♂️ Minhas principais **Soft Skills** são: organização, comunicação, curiosidade, empatia, liderança e responsabilidade.\n\n🚀 Eu amo aprender coisas novas e acredito fortemente no aprendizado contínuo, o próximo nível nunca será o último **#NeverStopLearning**."
+    }
+  ],
+  "experiencias": [
+    {
+      "id": 1,
+      "title": "Algoritmos e Lógica de Programação (Curso em Vídeo)",
+      "description": "",
+      "type": "academica",
+      "startYear": "",
+      "endYear": ""
+    },
+    {
+      "id": 2,
+      "title": "JavaScript Iniciante (Curso em Vídeo)",
+      "description": "",
+      "type": "academica",
+      "startYear": "",
+      "endYear": ""
+    },
+    {
+      "id": 3,
+      "title": "Desenvolvimento Web Full Stack (Explorer - Rocketseat)",
+      "description": "",
+      "type": "academica",
+      "startYear": "",
+      "endYear": ""
+    },
+    {
+      "id": 4,
+      "title": "Análise e Desenvolvimento de Sistemas (Faculdade Nova Roma)",
+      "description": "",
+      "type": "academica",
+      "startYear": "",
+      "endYear": ""
+    },
+    {
+      "id": 5,
+      "title": "Desenvolvimento de Software (Comeia Academy)",
+      "description": "",
+      "type": "academica",
+      "startYear": "",
+      "endYear": ""
+    },
+    {
+      "id": 6,
+      "title": "General English (Inglês para Devs)",
+      "description": "",
+      "type": "academica",
+      "startYear": "",
+      "endYear": ""
+    }
+  ],
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "🐾 Find a Friend",
+      "image": "https://www.youtube.com/watch?v=E12HuWm_Fzs",
+      "github": "https://github.com/Elias-Neto/find-a-friend",
+      "deploy": "https://elias-neto.github.io/find-a-friend/",
+      "demonstration": "https://www.youtube.com/embed/E12HuWm_Fzs",
+      "description": "Essa Landing Page foi desenvolvida para o lançamento do FindAFriend, um app que conecta ONGs e entidades protetoras a pessoas adotantes e animais resgatados."
+    },
+    {
+      "id": 2,
+      "title": "📝 RocketNotes",
+      "demonstration": "https://www.youtube.com/embed/ZcfFAP86OmY",
+      "github": "https://github.com/Elias-Neto/rocketnotes",
+      "deploy": "https://rocketn0tes.netlify.app/",
+      "description": "No RocketNotes você poderá criar sua conta e desfrutar de um ambiente para você registrar suas anotações."
+    }
+  ]
+}

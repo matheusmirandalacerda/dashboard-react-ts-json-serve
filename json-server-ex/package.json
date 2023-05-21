@@ -1,0 +1,15 @@
+{
+  "name": "json-server-dash-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "watch": "json-server db.json --port=6000"
+  },
+  "dependencies": {
+    "clone": "^2.1.2",
+    "json-server": "^0.17.3"
+  }
+}
