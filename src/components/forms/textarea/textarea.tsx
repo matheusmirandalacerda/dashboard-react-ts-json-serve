@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Field, ErrorMessage } from 'formik';
 
-import styles from './textarea.module.css';
+import styles from './Textarea.module.css';
 
 interface TextareaProps {
     label?: string;
