@@ -1,6 +1,92 @@
-import React, {useState} from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "./ListaPortfolio.module.css";
+import { Portfolio, getPortfolios, deletePortfolio } from "../../../services/experienciaPortfolio";
 
-import styles from "./ListaPortifolio.module.css";
+
+const ListaPortfolio: React.FC = () => {
+    const navigate = useNavigate();
+
+    const [portfolios , setPortfolios] = React.useState<Portfolio[]>([/*{
+        id:1,
+        link: 'https://academy.comeialabs.com.br/',
+        image:'https://picsum.photos/300/200?random=1',
+        title: 'Portfólio 1',
+    },
+    {
+        id:2,
+        link: 'https://academy.comeialabs.com.br/',
+        image:'https://picsum.photos/300/200?random=2',
+        title: 'Portfólio 2',
+    },
+    {
+        id:3,
+        link: 'https://academy.comeialabs.com.br/',
+        image:'https://picsum.photos/300/200?random=3',
+        title: 'Portfólio 3',
+    }*/]);
+
+    const fetchPortfolios = async () => {
+        try {
+            const portfolios = await getPortfolios();
+            setPortfolios(portfolios);
+        } catch (error) {
+            console.log('Erro ao buscar portfolios', error);            
+        }
+    }
+
+    useEffect(() => {
+        fetchPortfolios();
+    }, []);
+
+    const handleEdite = async (portfolio: Portfolio) => {
+        navigate("/portfolio/cadastro", { state: portfolio });
+    };
+
+    const handleDelete = async (id: number) => {
+        try {
+            await deletePortfolio(id);
+            fetchPortfolios();
+            alert('Portfolio excluído com sucesso!');
+        } catch (error) {
+            console.log('Erro ao excluir portfolio', error);
+            alert("Ocorreu um erro ao excluir o portfolio");
+        }
+    };
+
+    return (
+        <table className={styles.table}>
+            <thead>
+                <tr>
+                    <th>Link</th>
+                    <th>Imagem</th>
+                    <th>Título</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {portfolios.map((portfolio, index) => (
+                    <tr key={index}>
+                    <td>{portfolio.title}</td>
+                    <td><img src={portfolio.image} alt={portfolio.title} className={styles.image} /></td>
+                    <td><a href={portfolio.link} target="_blank" rel="noreferrer">{portfolio.link}</a></td>
+                    <td>
+                            <button onClick={() => handleEdite(portfolio)}>Editar</button>
+                            <button onClick={() => handleDelete(portfolio.id)}>Excluir</button>
+                        </td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    )
+};
+
+export default ListaPortfolio;
+
+
+/*import React, {useState} from "react";
+
+import styles from "./ListaPortfolio.module.css";
 
 
 interface Portfolio {
@@ -66,4 +152,4 @@ const ListaPortfolio: React.FC = () => {
     )
 };
 
-export default ListaPortfolio;
+export default ListaPortfolio;*/
