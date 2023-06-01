@@ -39,7 +39,8 @@ const Login = () => {
 
     const onSubmit = async (values: LoginValues) => {
         try {
-            const user = await loginService(values.email, values.password);
+            //const user = await loginService(values.email, values.password);
+            const user = await loginService({ email: values.email, password: values.password });
             login(user);
             navigate("/");
             console.log(values);
